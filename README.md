@@ -40,7 +40,10 @@ pos_sentence_num2 = vocab2.sentence_num vocab2.write_word2id(input_data2, id_inp
 env = Environment(batch_size, vocab_size, emb_size, d_hidden, T, dropout, d_lr)
 agent = Agent(sess, vocab_size2, emb_size, g_hidden, T, g_lr)
 #vocab_size -> vocab_size2
+
+```
 生成器のデータサイズ(データの次元量)に合わせるように改変した。
+```
 def pre_train():
 g_data = DataForGenerator(
 　　 id_input_data2, #id_input_data -> id_input_data2 batch_size, T,
